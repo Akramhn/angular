@@ -1,0 +1,19 @@
+
+<div *ngIf="active===false">
+  <h1>Impossible de visualiser les détails
+    de la facture</h1>
+</div>
+<div *ngFor="let invoice of dataList">
+  <div *ngIf="invoice.idFacture===id && active===true">
+    {{invoice.idFacture}}
+    {{invoice.montantRemise}}
+    {{invoice.montantFacture}}
+    {{invoice.dateFacture}}
+    {{invoice.active}}
+  </div>
+</div>
+<br>
+<button (click)="retour()">Retour</button>
+
+
+

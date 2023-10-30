@@ -1,0 +1,9 @@
+<ng-content></ng-content>
+<ul *ngFor="let item of studentsList,let i=index"><li>{{i}}:{{item}}</li></ul>
+<div *ngIf="cd else alt">
+<input [type]="var3" value="Send" (click)="register()">
+<!--<input type="text" [(ngModel)]="var1">-->
+</div>
+<ng-template #alt>
+  <p><span>condition non verified!</span></p>
+</ng-template>
